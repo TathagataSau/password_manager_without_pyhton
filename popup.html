@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Password Manager</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+
+  <div class="container" style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;">
+    <h1 style="text-align: center; margin-bottom: 20px; color: #333;">Simple Password Manager</h1>
+
+    <div id="popup1" class="popup" style="display: block; text-align: center;">
+      <h3>Do you want to protect your password manager?</h3>
+      <button id="yesButton" style="margin: 5px; padding: 8px 12px; border: none; border-radius: 3px; color: #fff; background-color: #3da5eb; cursor: pointer;">Yes</button>
+      <button id="noButton" style="margin: 5px; padding: 8px 12px; border: none; border-radius: 3px; color: #fff; background-color: #f0506e; cursor: pointer;">No</button>
+    </div>
+
+    <div id="popup2" class="popup" style="display: none; text-align: center;">
+      <h3>Set Password</h3>
+      <input type="password" id="masterPasswordInput" placeholder="Enter Master Password" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
+      <button id="setMasterPasswordButton" style="margin: 5px; padding: 8px 12px; border: none; border-radius: 3px; color: #fff; background-color: #4caf50; cursor: pointer;">Set Master Password</button>
+      <button id="generatePasswordButton" style="margin: 5px; padding: 8px 12px; border: none; border-radius: 3px; color: #fff; background-color: #4caf50; cursor: pointer;">Generate Password</button>
+      <input type="text" id="generatedPassword" readonly style="width: 70%;">
+    </div>
+
+    <div id="popup3" class="popup" style="display: none; text-align: center;">
+      <h3>Save Password</h3>
+      <input type="text" id="websiteTagInput" placeholder="Website Tag (e.g., example.com)" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
+      <input type="text" id="usernameInput" placeholder="Username" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
+      <input type="password" id="passwordInput" placeholder="Password" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
+      <button id="saveButton" style="margin: 5px; padding: 8px 12px; border: none; border-radius: 3px; color: #fff; background-color: #4caf50; cursor: pointer;">Save Password</button>
+
+      <!-- Show saved password data in popup3 -->
+      <div id="savedPasswords" style="text-align: left; margin-top: 20px;"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
